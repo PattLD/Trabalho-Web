@@ -43,10 +43,6 @@ body {
     border: 5px solid white;
     border-radius: 15px;
   }
-
-
-
-
 .btn-success{
   background: var(--marrom-escuro);
 }
@@ -108,17 +104,66 @@ background-color: var(--branco);
         width: 100%;
         display: block;
     }
-
-    .d-flex.justify-content-between {
+.d-flex.justify-content-between {
         flex-direction: column;
         text-align: center;
     }
-
-    table.table {
+  table.table {
         font-size: 12px;
         display: block;
         overflow: auto; 
     }
+}
+#api_load{
+  height: 20vh;
+  font-size: 55px;
 
+}
+    .valor1 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      font-size: 55px;
+      color: rgb(0, 140, 255);
+    } 
+    .valor1:hover{
+      color: rgb(73, 163, 248);
+    }
 
+        .valor {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      font-size: 32px;
+      color: rgba(0, 0, 0, 0.732);
+      position: absolute;
+    } 
+    .valor:hover{
+      color: rgb(159, 26, 26);
+    }
+
+.temperatura{
+  display: flex;
+  
+}
+.sol{
+  height: 80px;
+  width: 90px;
+  margin-right: 18px;  
+}
+.carde{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+@media (max-width: 900px) {
+  #api_load{
+    font-size: 30px;
+  }
+  .valor{
+    margin-left: 0px;
+    font-size: 20px;
+  }
+  .valor1{
+    font-size: 40px;
+  }
+  .soll{
+    margin-right: 10px;
+  }
 }
