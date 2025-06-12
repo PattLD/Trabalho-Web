@@ -116,12 +116,12 @@ background-color: var(--branco);
 }
 #api_load{
   height: 20vh;
-  font-size: 55px;
+  font-size: 40px;
 
 }
     .valor1 {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-      font-size: 55px;
+      font-size: 40px;
       color: rgb(0, 140, 255);
     } 
     .valor1:hover{
@@ -151,7 +151,10 @@ background-color: var(--branco);
   display: flex;
   align-items: center;
   flex-direction: column;
+  
 }
+
+
 @media (max-width: 900px) {
   #api_load{
     font-size: 30px;

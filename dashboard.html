@@ -48,7 +48,7 @@
         <section class="carde">
         <section class="temperatura">
             <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" class="sol" alt="">
-            <section id="api_load">,</section>
+            <section id="api_load">...Carregando</section>
         </section>
     </section>
     </section>
@@ -64,12 +64,10 @@
                 const tempo = data.current.wind_speed_10m; // Pega a tempo
           document.getElementById('api_load').innerHTML = `
           Temperatura: <span class="valor1">${temperatura}°C</span><br>
-          <span class="valor">VentoVelocidade:&nbsp;&nbsp;&nbsp;${tempo}</span>
+          <span class="valor">Vento: &nbsp;&nbsp;${tempo} Km/h</span>
         `; //.innerHTML para poder usar <br> e <span>
           
             });
-
-
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
