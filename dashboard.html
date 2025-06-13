@@ -56,15 +56,13 @@
     <script>
 
         // Faz uma requisição à API da Open-Meteo com a latitude e longitude de Fortaleza
-        // Código rodando direto, sem função
-        fetch('https://api.open-meteo.com/v1/forecast?latitude=-3.72&longitude=-38.51&current=temperature_2m,wind_speed_10m')
-            .then(response => response.json())  // Converte resposta para JSON
-            .then(data => {
+
+        fetch('https://api.open-meteo.com/v1/forecast?latitude=-3.72&longitude=-38.51&current=temperature_2m,wind_speed_10m').then(response => response.json())  /* Converte resposta para JSON*/.then(data => {
                 const temperatura = data.current.temperature_2m; // Pega a temperatura
-                const tempo = data.current.wind_speed_10m; // Pega a tempo
+                const Vento = data.current.wind_speed_10m; 
           document.getElementById('api_load').innerHTML = `
           Temperatura: <span class="valor1">${temperatura}°C</span><br>
-          <span class="valor">Vento: &nbsp;&nbsp;${tempo} Km/h</span>
+          <span class="valor">Vento: &nbsp;&nbsp;${Vento} Km/h</span>
         `; //.innerHTML para poder usar <br> e <span>
           
             });
