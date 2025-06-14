@@ -10,7 +10,7 @@
                 if (!form.checkValidity()) { //checa se o formulario é invalido (!)
                     event.preventDefault(); // se invalido, previne envio
                     event.stopPropagation(); //evita que o evento se propague para elementos pai
-                }  
+                }
 
                 form.classList.add("was-validated"); //acrescenta a classe de verificação do bootstrap
             },
@@ -19,11 +19,7 @@
     });
 })();
 
+// MASCARAS
 
-const phoneInput = document.getElementById("telefone");
-
-// impede que digite letra no input do telefone
-phoneInput.addEventListener("input", () => {
-    // converte qualquer outro caracter digitado em uma string vazia
-    phoneInput.value = phoneInput.value.replace(/[^0-9]/g, "");
-});
+$('#telefone').mask('(00) 00000-0000')
+$('#preco').mask("000.000,00", {reverse: true});

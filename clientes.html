@@ -117,12 +117,13 @@
                 id="telefone"
                 class="form-control"
                 type="text"
-                pattern="[0-9]{9}"
-                required minlength="9" maxlength="9"
+                required
+                minlength="15"
+                maxlength="15"
                 placeholder="Digite aqui"
               />
               <div class="invalid-feedback">
-                Digite um número de telefone com no mínimo 9 digitos
+                Digite um número de telefone com DDD e mais 9 digitos
               </div>
             </div>
 
@@ -130,12 +131,11 @@
               <label for="endereco">Endereço</label>
               <textarea
                 id="endereco"
-                class="form-control" required
+                class="form-control"
+                required
                 placeholder="Digite aqui"
               ></textarea>
-              <div class="invalid-feedback">
-                Digite um endereço válido
-              </div>
+              <div class="invalid-feedback">Digite um endereço válido</div>
             </div>
 
             <div class="mb-4">
@@ -174,10 +174,11 @@
       crossorigin="anonymous"
     ></script>
 
-    <script src="js/clientes.js"></script> <script src="js/forms.js"></script>
+    // frameworks para máscara
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
 
-    <script>
-      
-    </script>
+    <script src="js/clientes.js"></script>
+    <script src="js/forms.js"></script>
   </body>
 </html>
