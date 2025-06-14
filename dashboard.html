@@ -45,13 +45,14 @@
     <hr>
     <section class="card card-body">
         <h1>Bem vindo!</h1>
-        <section class="carde">
+        <section class="carde" class ="card">
         <section class="temperatura">
+            
             <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" class="sol" alt="">
-            <section id="api_load">...Carregando</section>
+            <section id="api_load">--C</section>
         </section>
     </section>
-    </section>
+    </section>   
 
     <script>
 
@@ -62,7 +63,7 @@
                 const Vento = data.current.wind_speed_10m; 
           document.getElementById('api_load').innerHTML = `
           Temperatura: <span class="valor1">${temperatura}°C</span><br>
-          <span class="valor">Vento: &nbsp;&nbsp;${Vento} Km/h</span>
+          <span class="valor">Vento: &nbsp;&nbsp;${Vento} Km/h 🌤️</span>
         `; //.innerHTML para poder usar <br> e <span>
           
             });

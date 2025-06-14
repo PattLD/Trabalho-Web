@@ -74,6 +74,10 @@ body {
   background-color: var(--branco);
 }
 
+.card-body:hover {
+  background-color: #f7eedbeb;
+}
+
 .table {
   --bs-table-bg: var(--branco);
   --bs-table-hover-bg: var(--laranja-escuro);
