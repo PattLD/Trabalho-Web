@@ -5,74 +5,77 @@
   --marrom-claro: #733614;
   --marrom-escuro: #5e210b;
   --branco: #f7eedb;
-  --preto: #1a0701;
+  --preto: #1a0701;
 }
 
 body {
-    background-color: var(--amarelo);
-    color: var(--marrom-escuro);
+  background-color: var(--amarelo);
+  color: var(--marrom-escuro);
 }
 
-.btn-outline-dark{
+.btn-outline-dark {
   color: var(--marrom-escuro);
   background: var(--branco);
 }
-.btn-outline-dark:hover{
+
+.btn-outline-dark:hover {
   background: var(--marrom-escuro);
 }
 
 .material-icons {
-    vertical-align: sub;
+  vertical-align: sub;
 }
 
- .zoomable {
-    cursor: pointer;
-    transition: 0.3s;
-  }
+.zoomable {
+  cursor: pointer;
+  transition: 0.3s;
+}
 
-  .zoomable:active {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    width: auto;
-    height: 60%;
-    max-width: 80%;
-    transform: translate(-50%, -50%);
-    box-shadow: 0 0 10px rgba(0,0,0,0.8);
-    background: white;
-    border: 5px solid white;
-    border-radius: 15px;
-  }
+.zoomable:active {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: auto;
+  height: 60%;
+  max-width: 80%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  background: white;
+  border: 5px solid white;
+  border-radius: 15px;
+}
 
-
-
-
-.btn-success{
+.btn-success {
   background: var(--marrom-escuro);
 }
 
-.btn-success:hover{
+.btn-success:hover {
   background: var(--marrom-claro);
 }
 
-.btn-warning{
+.btn-warning {
   background: var(--amarelo);
 }
 
-.btn-primary{
+.btn-primary {
   background: var(--marrom-escuro);
 }
-.btn-primary:hover{
+
+.btn-primary:hover {
   background: var(--marrom-claro);
 }
 
-.btn-outline-warning{
+.btn-outline-warning {
   background: var(--marrom-escuro);
   color: var(--branco)
 }
 
 .card-body {
-background-color: var(--branco);
+  background-color: var(--branco);
+}
+
+.card-body:hover {
+  background-color: #f7eedbeb;
 }
 
 .table {
@@ -86,42 +89,106 @@ background-color: var(--branco);
 }
 
 @media (max-width: 768px) {
-    body.container {
-        padding: 10px;
-    }
+  body.container {
+    padding: 10px;
+  }
 
-    .row.align-items-center {
-        flex-direction: column;
-        text-align: center;
-    }
+  .row.align-items-center {
+    flex-direction: column;
+    text-align: center;
+  }
 
-    .row.align-items-center .col {
-        margin-bottom: 10px;
-    }
+  .row.align-items-center .col {
+    margin-bottom: 10px;
+  }
 
-    .text-end {
-        text-align: center !important;
-    }
+  .text-end {
+    text-align: center !important;
+  }
 
-    .btn {
-        margin: 5px 0;
-        width: 100%;
-        display: block;
-    }
+  .btn {
+    margin: 5px 0;
+    width: 100%;
+    display: block;
+  }
 
-    .d-flex.justify-content-between {
-        flex-direction: column;
-        text-align: center;
-    }
+  .d-flex.justify-content-between {
+    flex-direction: column;
+    text-align: center;
+  }
 
-    table.table {
-        font-size: 12px;
-        display: block;
-        overflow: auto; 
-    }
+  table.table {
+    font-size: 12px;
+    display: block;
+    overflow: auto;
+  }
+}
+
+#api_load {
+  height: 20vh;
+  font-size: 40px;
+
+}
+
+.valor1 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 40px;
+  color: rgb(0, 140, 255);
+}
+
+.valor {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 32px;
+  color: rgba(0, 0, 0, 0.732);
+  position: absolute;
+}
+
+.valor:hover {
+  color: rgb(159, 26, 26);
+}
+
+.valor1:hover {
+  color: rgb(73, 163, 248);
+}
+
+.temperatura {
+  display: flex;
+
+}
+
+.sol {
+  height: 80px;
+  width: 90px;
+  margin-right: 18px;
+}
+
+.carde {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+}
+
+
+@media (max-width: 900px) {
+  #api_load {
+    font-size: 30px;
+  }
+
+  .valor {
+    margin-left: 0px;
+    font-size: 20px;
+  }
+
+  .valor1 {
+    font-size: 40px;
+  }
+
+  .soll {
+    margin-right: 10px;
+  }
 
     input:invalid:not(:placeholder-shown) {
     border-color: #e53e3e; 
     box-shadow: 0 0 0 1px #e53e3e; 
     }
-}
