@@ -53,20 +53,17 @@
         </section>
     </section>
     </section>   
-
+    
     <script>
+        let url_Api = 'https://api.open-meteo.com/v1/forecast?latitude=-3.72&longitude=-38.51&current=temperature_2m,wind_speed_10m'
+        
+       fetch(url_Api).then(response => response.json()).then(data => {   /* Converte resposta para JSON*/
+            const temperatura = data.current.temperature_2m;    // Pega a temperatura
+            const Vento = data.current.wind_speed_10m; document.getElementById('api_load').innerHTML = `
+            Temperatura: <span class="valor1">${temperatura}°C</span><br>
+            <span class="valor">Vento: &nbsp;&nbsp;${Vento} Km/h 🌤️</span>`; 
+          });
 
-        // Faz uma requisição à API da Open-Meteo com a latitude e longitude de Fortaleza
-
-        fetch('https://api.open-meteo.com/v1/forecast?latitude=-3.72&longitude=-38.51&current=temperature_2m,wind_speed_10m').then(response => response.json())  /* Converte resposta para JSON*/.then(data => {
-                const temperatura = data.current.temperature_2m; // Pega a temperatura
-                const Vento = data.current.wind_speed_10m; 
-          document.getElementById('api_load').innerHTML = `
-          Temperatura: <span class="valor1">${temperatura}°C</span><br>
-          <span class="valor">Vento: &nbsp;&nbsp;${Vento} Km/h 🌤️</span>
-        `; //.innerHTML para poder usar <br> e <span>
-          
-            });
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
